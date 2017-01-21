@@ -32,26 +32,31 @@ function tree(treeTraits) {
 	//loop is set to run eight times: i'm doing things across
 	//the instance of the array that I want to print to the 
 	//console.
-	for (var eye = 0; eye < middle; eye++){
+	// for (var eye = 0; eye < middle; eye++){
 
 		//godsPlan is obviously immutable, so I tell a branch
  		//of the tree about it. The branches are different
  		//every time the loop runs.
  		var branch = godsPlan;
+ 		console.log(godsPlan)
 
  		//this loop iterates over array 'branch' and replaces
  		//the output character with empty space.
-		for (var i = 0; i < branch.length; i++) {
-			if(i === middle - eye) {
-				for (var q = middle - eye; q < middle - eye; q++) {
-					branch[q] = treeTraits.character;
-				}
-			}
-			branch[i] = ' ';
+ 		//
+ 		//first is the first half.
+		for (var q = 0; q < middle - eye; q++) {
+			branch[q] = ' ';
 		}
- 		console.log(branch.toString());
+		
+		//second is the second half.
+		for (q = middle + (eye + 1);  q < branch.length; q++) {
+			branch[q] = ' ';
+			// console.log(branch)
+			
+		}
+ 	// 	console.log(branch.toString());
 	}
-}
+// }
 
 tree(pineTraits);
 
