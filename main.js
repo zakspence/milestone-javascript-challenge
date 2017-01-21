@@ -45,6 +45,7 @@ function tree(treeTraits) {
 			if(i === middle - eye) {
 				for (var q = middle - eye; q < middle - eye; q++) {
 					branch[q] = treeTraits.character;
+				}
 			}
 			branch[i] = ' ';
 		}
