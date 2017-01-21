@@ -1,25 +1,30 @@
+
 var pineTraits = {
-	height: ,
-	character: ""
+	height: 8,
+	character: '#'
 }
 
-console.log(pineTraits.height)
-function apply(event) {
-	if (event === 13)
-		tree();
-}
+
+var submitButton = document.getElementById('submit');
+
 
 function tree(treeTraits) {
+	//set variables to user inputs
+	// treeTraits.height = document.getElementById('height').value;
+	// treeTraits.character = document.getElementById('char').value;	
+	
 	for (var i = 0; i < treeTraits.height; i++) {
 
-		// var treeBranch = 
-		console.log(treeBranch);
+		var branch = i*2 + 1;
+		var middle = (treeTraits.height);
+		var godsPlan = [];
+		for (var y = 0; y < branch; y++) {
+			godsPlan.push.call(godsPlan, treeTraits['character']);
+		};
+		console.log(godsPlan)
+
+
 	}
 }
 
-var heightField = document.getElementsByName('height');
-var charField = document.getElementsByName('character');
-var submitButton = document.getElementsByName('submit');
-console.log(submitButton)
-submitButton.addEventListener("click", apply(event));
-	
+tree(pineTraits);
