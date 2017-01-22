@@ -1,25 +1,21 @@
+
+// where my ahbjkts @
 var pineTraits = {
-	height: ,
-	character: ""
+	height: 8,
+	character: '8'
 }
 
-console.log(pineTraits.height)
-function apply(event) {
-	if (event === 13)
-		tree();
-}
+// show me whatcha workin for
+var submitButton = document.getElementById('submit');
+submitButton.addEventListener("click", tree);
 
+// all the funkshuns be like
 function tree(treeTraits) {
-	for (var i = 0; i < treeTraits.height; i++) {
 
-		// var treeBranch = 
-		console.log(treeBranch);
+	var spaces = ' ';
+	var char = document.getElementById('char').value;
+	var numSpaces = document.getElementById('height').value - 1;
+	for (var i = 0; i < numSpaces; i++) {
+		console.log(spaces.repeat(numSpaces - i), char.repeat(2*i + 1));
 	}
 }
-
-var heightField = document.getElementsByName('height');
-var charField = document.getElementsByName('character');
-var submitButton = document.getElementsByName('submit');
-console.log(submitButton)
-submitButton.addEventListener("click", apply(event));
-	
